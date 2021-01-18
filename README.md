@@ -23,3 +23,48 @@ DATABASE=mongodb+srv://TomJ92:<tomtom>@ppe-lyarb.gcp.mongodb.net/test?retryWrite
 
 ### Iniciar en debug
 ```npm run start:dev```
+
+
+#### Base de données
+2 bases de données sont disponibles:
+    - base de données "PPE": base fonctionnelle, c'est la base de production
+    - base de données "DEV": base de test de développpement pour effectuer toutes les modifications sans importer la base de données de production
+
+Pour utiliser une base de données il suffit de choisir le nom de la base et d'utiliser le lien associé dans le fichier /src/.env:
+    - Pour "PPE": 
+        PORT = 4000
+        SECRET = PPE
+        DATABASE = mongodb://TomJ92:tomtom92@ppe-shard-00-00-lyarb.gcp.mongodb.net:27017,ppe-shard-00-01-lyarb.gcp.mongodb.net:27017,ppe-shard-00-02-lyarb.gcp.mongodb.net:27017/PPE?ssl=true&replicaSet=PPE-shard-0&authSource=admin&retryWrites=true&w=majority
+    - Pour "DEV":
+        PORT = 4000
+        SECRET = DEV
+        DATABASE = mongodb://TomJ92:tomtom92@ppe-shard-00-00-lyarb.gcp.mongodb.net:27017,ppe-shard-00-01-lyarb.gcp.mongodb.net:27017,ppe-shard-00-02-lyarb.gcp.mongodb.net:27017/DEV?ssl=true&replicaSet=PPE-shard-0&authSource=admin&retryWrites=true&w=majority
+
+Pour la connexion, les identifiant de connexion actuel sont: (à compléter à chaque création de profil)
+    - Côté podologue:
+        - (email:"manuel@edu.fr", password:"12345")
+        - (email: "jean.papon@gmail.com", password:"password")
+        - (email:"podologue@feetback.fr", password:"password")
+    - Côté patient:
+        - (email:"tom.jouvet@edu.ece.fr", password:"password")
+        - (email:"sofia@edu.fr", password:"password")
+        - (email:"sbsn", password:"password")
+        - (email:"a", password:"password")
+        - (email:"test", password:"password")
+        - (email:"william.terrien@edu.ece.fr", password:"password")
+        - (email:"patient@feetback.fr", password:"password")
+
+### compilation
+Pour compiler le projet écrit en TypeScript, il suffit de taper, dans le dossier de travail,la ligne de commande:
+tsc
+
+Cela génére les fichiers JavaScript dans le dossier: /build/
+
+### Lancer le serveur
+Pour lancer le seveur, il suffit de taper, dans le dossier de travail, la ligne de commande:
+node build/server.js
+
+Puis, il faut ouvrir un onglet internet avec le lien:
+http://localhost:4000/graphql
+
+Graphql permet de construire les requêtes.
