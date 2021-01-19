@@ -12,6 +12,15 @@ En este proyecto vamos a aprender como crear un sistema para registro de usuario
 
 ### Instalar las dependencias de NPM
 ```npm install```
+```npm install express```
+```npm install graphql```
+```npm install graphql-tools```
+```npm install mongodb```
+```npm install bcryptjs```
+```npm install compression```
+```npm install apollo-server-express```
+```npm install graphql-playground-middleware-express```
+```npm install chalk```
 
 ### Crear el fichero de variables de entorno
 Creamos el fichero .env dentro del directorio "src"
