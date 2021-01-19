@@ -28,9 +28,11 @@ DATABASE=mongodb+srv://TomJ92:<tomtom>@ppe-lyarb.gcp.mongodb.net/test?retryWrite
 #### Base de données
 2 bases de données sont disponibles:
     - base de données "PPE": base fonctionnelle, c'est la base de production
+
     - base de données "DEV": base de test de développpement pour effectuer toutes les modifications sans importer la base de données de production
 
 Pour utiliser une base de données il suffit de choisir le nom de la base et d'utiliser le lien associé dans le fichier /src/.env:
+
     - Pour "PPE": 
         PORT = 4000
         SECRET = PPE
@@ -68,3 +70,13 @@ Puis, il faut ouvrir un onglet internet avec le lien:
 http://localhost:4000/graphql
 
 Graphql permet de construire les requêtes.
+
+### Lien
+Pour créer et utiliser des requêtes:
+
+https://www.youtube.com/watch?v=zatQlSyjW_Q
+
+https://www.youtube.com/watch?v=b8i8hxEQWGg
+
+https://www.youtube.com/watch?v=7I_LcVVyKIk
+
