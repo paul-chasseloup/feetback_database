@@ -71,9 +71,7 @@ type Sensor {
   number: Int!
   posX: Float!
   posY: Float!
-  averagePressureS: Float!
-  minPressureS: Float!
-  maxPressureS: Float!
+  collectedMesures: [Float]
 }
 
 type Measure {
@@ -132,9 +130,7 @@ input SensorInput {
   number: Int
   posX: Float
   posY: Float
-  averagePressureS: Float!
-  minPressureS: Float!
-  maxPressureS: Float!
+  collectedMesures: [Float]
 }
 
 input MeasureInput {

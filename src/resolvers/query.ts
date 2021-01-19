@@ -42,6 +42,7 @@ const query: IResolvers = {
         user: user
       };
     },
+    
     //Get my current information when logged in by token
     me(_: void, __: any, { token }) {
       let info: any = new JWT().verify(token);
@@ -58,6 +59,7 @@ const query: IResolvers = {
         user: info.user
       };
     },
+
     //Get all measures from the database based on the patient id
     async getMeasures(_: void, { patient }, { db, token }): Promise<any> {
       return await db
@@ -65,6 +67,7 @@ const query: IResolvers = {
         .find({ patientId: patient })
         .toArray();
     },
+
     //Get all patients from a podiatrist
     async getPacients(_: void, { podiatrist }, { db, token }): Promise<any> {
       let info: any = new JWT().verify(token);
@@ -87,6 +90,7 @@ const query: IResolvers = {
         pacients: pacients
       };
     },
+
     //Get all unasigned patients
     async getFreePacients(_: void, {}, { db, token }): Promise<any> {
       let info: any = new JWT().verify(token);
@@ -108,6 +112,7 @@ const query: IResolvers = {
         pacients: pacients
       };
     },
+
     //Gt specific patient of a podiatrist
     async getPacient(
       _: void,
