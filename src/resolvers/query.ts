@@ -12,6 +12,13 @@ const query: IResolvers = {
         .find()
         .toArray();
     },
+        //For the tests
+        async tests(_: void, { email }, {db}): Promise<any> {
+          return await db
+            .collection("users")
+            .find({ email: email })
+            .toArray();
+        },
     //Log an user
     async login(_: void, { email, password }, { db }): Promise<any> {
       //Get the user

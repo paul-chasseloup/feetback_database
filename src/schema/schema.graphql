@@ -17,6 +17,7 @@ type Query {
   getFreePacients: ResultGeneral!
   "Get a pacients"
   getPacient(podiatrist: ID!, patient: ID!): ResultGeneral!
+  tests(email: String!): [User!]!
 }
 
 type Mutation {
@@ -36,6 +37,8 @@ type Mutation {
   updateUser(user: ID!, change: UserUpdateInput!): ResultGeneral!
   "Add array of patients"
   addPatientsArray(podiatrist: ID!, patients: [ID!]!): ResultGeneral!
+  "Add mesure csv"
+  addCsvMesure(measure: MeasureCsvInput): ResultGeneral!
 }
 
 type User {
@@ -133,11 +136,25 @@ input SensorInput {
   collectedMesures: [Float]
 }
 
+input SensorCsvInput {
+  number: Int
+  posX: Float
+  posY: Float
+  liste: [Float]!
+}
+
 input MeasureInput {
   patientId: String!
   duration: String
   csv: String
   sensors: [SensorInput]!
+}
+
+input MeasureCsvInput {
+  patientId: String!
+  duration: String
+  csv: String
+  sensors: [SensorCsvInput]!
 }
 
 type ResultGeneral {

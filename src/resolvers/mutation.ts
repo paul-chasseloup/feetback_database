@@ -123,6 +123,28 @@ const mutation: IResolvers = {
         });
     },
 
+
+    async addCsvMesure(_: void, { measure }, { db }): Promise<any> {
+      measure.date = new Datetime().getCurrentDateTime();
+      return await db
+        .collection("measures")
+        .insertOne(measure)
+        .then((result: any) => {
+          return {
+            status: true,
+            message: `Successful addition to measures.`,
+            measure
+          };
+        })
+        .catch((err: any) => {
+          return {
+            status: false,
+            message: `Failed addition to measures.`,
+            measure: null
+          };
+        });
+    },
+
     //Upload a CSV file
     async uploadCSV(_: void, { csvFile, token }, { db }): Promise<any> {
       const path = require("path");

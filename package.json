@@ -39,7 +39,7 @@
     "graphql-upload": "^10.0.0",
     "http": "0.0.0",
     "jsonwebtoken": "^8.5.1",
-    "mongodb": "^3.2.7",
+    "mongodb": "^3.6.3",
     "ncp": "^2.0.0",
     "nodemon": "^2.0.2",
     "ts-node": "^8.6.2",
