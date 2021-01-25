@@ -155,6 +155,7 @@ input SensorInput {
   number: Int
   posX: Float
   posY: Float
+  liste: [Double]!
   averagePressureS: Float!
   minPressureS: Float!
   maxPressureS: Float!
