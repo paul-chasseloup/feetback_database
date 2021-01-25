@@ -18,6 +18,8 @@ type Query {
   "Get a pacients"
   getPacient(podiatrist: ID!, patient: ID!): ResultGeneral!
   tests(email: String!): [User!]!
+  "Obtain all patient's measures"
+  getMeasuresCsv(patient: String!): [MeasureCsv!]!
 }
 
 type Mutation {
@@ -79,12 +81,30 @@ type Sensor {
   maxPressureS: Float!
 }
 
+type SensorCsv {
+  number: Int
+  posX: Float
+  posY: Float
+  liste: [Float]!
+  averagePressureS: Float
+  minPressureS: Float
+  maxPressureS: Float
+}
+
 type Measure {
   patientId: String!
   date: String!
   duration: String
   csv: String
   sensors: [Sensor]!
+}
+
+type MeasureCsv {
+  patientId: String!
+  date: String!
+  duration: String
+  csv: String
+  sensors: [SensorCSV]!
 }
 
 type Meeting {
@@ -145,6 +165,9 @@ input SensorCsvInput {
   posX: Float
   posY: Float
   liste: [Float]!
+  averagePressureS: Float
+  minPressureS: Float
+  maxPressureS: Float
 }
 
 input MeasureInput {

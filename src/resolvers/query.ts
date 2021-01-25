@@ -72,6 +72,13 @@ const query: IResolvers = {
         .find({ patientId: patient })
         .toArray();
     },
+    //Get all measures from the database based on the patient id
+    async getMeasuresCsv(_: void, { patient }, { db, token }): Promise<any> {
+      return await db
+        .collection("measures")
+        .find({ patientId: patient })
+        .toArray();
+    },
     //Get all patients from a podiatrist
     async getPacients(_: void, { podiatrist }, { db, token }): Promise<any> {
       let info: any = new JWT().verify(token);
