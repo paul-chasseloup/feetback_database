@@ -89,3 +89,6 @@ https://www.youtube.com/watch?v=b8i8hxEQWGg
 
 https://www.youtube.com/watch?v=7I_LcVVyKIk
 
+### Heroku
+
+Déploiement de la base de données à chaque push sur la branche "master"
