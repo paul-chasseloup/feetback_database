@@ -76,6 +76,7 @@ type Sensor {
   number: Int!
   posX: Float!
   posY: Float!
+  liste: [Float]!
   averagePressureS: Float!
   minPressureS: Float!
   maxPressureS: Float!
@@ -104,7 +105,7 @@ type MeasureCsv {
   date: String!
   duration: String
   csv: String
-  sensors: [SensorCSV]!
+  sensors: [SensorCsv]!
 }
 
 type Meeting {
@@ -155,7 +156,7 @@ input SensorInput {
   number: Int
   posX: Float
   posY: Float
-  liste: [Double]
+  liste: [Float]
   averagePressureS: Float!
   minPressureS: Float!
   maxPressureS: Float!
