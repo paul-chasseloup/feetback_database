@@ -105,7 +105,7 @@ type MeasureCsv {
   date: String!
   duration: String
   csv: String
-  sensors: [SensorCsv]!
+  sensors: [SensorCsv]! 
 }
 
 type Meeting {
