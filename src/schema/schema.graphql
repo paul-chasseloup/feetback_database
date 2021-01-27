@@ -76,7 +76,7 @@ type Sensor {
   number: Int!
   posX: Float!
   posY: Float!
-  liste: Double[]!
+  liste: Float[]!
   averagePressureS: Float!
   minPressureS: Float!
   maxPressureS: Float!
@@ -86,7 +86,7 @@ type SensorCsv {
   number: Int
   posX: Float
   posY: Float
-  liste: Double[]
+  liste: Float[]
   averagePressureS: Float
   minPressureS: Float
   maxPressureS: Float
@@ -156,7 +156,7 @@ input SensorInput {
   number: Int
   posX: Float
   posY: Float
-  liste: [Double]
+  liste: Float[]
   averagePressureS: Float!
   minPressureS: Float!
   maxPressureS: Float!
@@ -166,7 +166,7 @@ input SensorCsvInput {
   number: Int
   posX: Float
   posY: Float
-  liste: [Double]
+  liste: Float[]
   averagePressureS: Float
   minPressureS: Float
   maxPressureS: Float
