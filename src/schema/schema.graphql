@@ -86,7 +86,7 @@ type SensorCsv {
   number: Int
   posX: Float
   posY: Float
-  liste: [Float]!
+  liste: Float
   averagePressureS: Float
   minPressureS: Float
   maxPressureS: Float
