@@ -64,6 +64,7 @@ Pour la connexion, les identifiant de connexion actuel sont: (à compléter à c
         - (email:"test", password:"password")
         - (email:"william.terrien@edu.ece.fr", password:"password")
         - (email:"patient@feetback.fr", password:"password")
+        - compte de Laurent Delisle: (email:"")
 
 ### compilation
 Pour compiler le projet écrit en TypeScript, il suffit de taper, dans le dossier de travail,la ligne de commande:

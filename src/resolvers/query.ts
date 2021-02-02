@@ -72,6 +72,14 @@ const query: IResolvers = {
         .find({ patientId: patient })
         .toArray();
     },
+
+    //Get all measures from the database based on the patient id
+    async getMeasureslist(_: void, { patient }, { db, token }): Promise<any> {
+      return await db
+        .collection("measures")
+        .find({ patientId: patient })
+        .toArray();
+    },
     //Get all measures from the database based on the patient id
     async getMeasuresCsv(_: void, { patient }, { db, token }): Promise<any> {
       return await db
